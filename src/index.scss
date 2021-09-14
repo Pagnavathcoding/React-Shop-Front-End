@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+}
+$dark: #282c34;
+$cool: #61dafb;
+$darkest: #20232a;
+$white: #fff;
+$light: #f6f9fc;
+$orange: orange;
+$red: #ff2442;
+$check: #00c1d4;
+$shadow: 0 2px 4px #c8c8c8;
+$p: 18px;
+body {
+  background: $light;
+  color: $dark;
+}
+header {
+  width: 100%;
+  height: 10vh;
+  background: $dark;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3em;
+  position: fixed;
+  top: 0;
+}
+.logo {
+  font-size: 25px;
+  text-decoration: none;
+  color: $cool;
+}
+p {
+  font-size: $p;
+}
+.cart {
+  display: flex;
+  align-items: center;
+  padding: 0.1em 1em;
+  background: $darkest;
+  justify-content: center;
+  text-decoration: none;
+  color: $white;
+  border-radius: 30px;
+  border: 0.1em solid $cool;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.cart:hover {
+  transition: all 0.3s ease-in-out;
+  background: $cool;
+}
+.cart img {
+  height: 35px;
+}
+.greeting {
+  width: 100%;
+  padding: 2em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.greeting {
+  padding-top: 15vh;
+}
+.greeting h1 {
+  font-size: 40px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.products {
+  padding: 0 2em 0 0;
+  text-decoration: none;
+  color: $white;
+}
+.products:focus {
+  color: $orange;
+}
+.item {
+  width: 400px;
+  background: $white;
+  margin: 1em;
+  box-shadow: $shadow;
+  border-radius: 5px;
+}
+.items {
+  border-radius: 5px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.infos {
+  padding: 1em;
+}
+.infos button {
+  padding: 0.5em 1em;
+  background: $dark;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  color: $white;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.infos button:hover {
+  transition: all 0.3s ease-in-out;
+  background: $cool;
+}
+.infos button img {
+  height: 30px;
+  margin-left: 0.5em;
+}
+.added {
+  width: 100%;
+  height: 100vh;
+  background: $light;
+  position: fixed;
+  top: 0;
+  overflow-y: scroll;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.added.show {
+  transform: translateX(0%);
+}
+.close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: $white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+}
+.close:hover {
+  background: $cool;
+  transition: all 0.3s ease-in-out;
+}
+.close img {
+  height: 35px;
+}
+.title {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background: $dark;
+  color: $white;
+}
+.title h1 {
+  font-size: 25px;
+  color: $cool;
+}
+footer {
+  width: 100%;
+  height: 10vh;
+  background: $dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $white;
+  margin-top: 1em;
+}
+footer a {
+  text-decoration: none;
+  color: $cool;
+}
+.bag-item {
+  width: 50%;
+  padding: 1em 2em;
+  background: $white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  box-shadow: $shadow;
+  border-radius: 5px;
+  margin: 0 0 1em 0;
+}
+.delete button {
+  background: $red;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.delete button img {
+  height: 30px;
+  margin-left: 0.5em;
+}
+.bag {
+  width: 100%;
+  padding: 2em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.none {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 1em;
+}
+.total {
+  display: flex;
+  align-items: center;
+}
+.total p {
+  margin-left: 0.5em;
+}
+.check button {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $check;
+  margin-left: 3em;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-size: 18px;
+  color: $white;
+  cursor: pointer;
+}
+.check button img {
+  height: 30px;
+  margin-left: 0.5em;
+}
+.remove-all {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.remove-all button {
+  width: 140px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: $red;
+  font-size: 18px;
+  color: $white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .bag-item {
+    width: 75%;
+  }
+}
+@media (max-width: 900px) {
+  .bag-item {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    padding: 0 1em;
+  }
+  .bag-item {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2em 1em;
+  }
+  .images img {
+    height: 150px;
+  }
+  .delete button {
+    margin: 1em 0;
+  }
+  .greeting h1 {
+    font-size: 30px;
+  }
+  .name {
+    display: flex;
+    align-items: center;
+  }
+  .name p {
+    margin-left: 0.5em;
+  }
+  .name h1 {
+    font-size: 20px;
+  }
+  .price {
+    display: flex;
+    align-items: center;
+  }
+  .price p {
+    margin-left: 0.5em;
+  }
+  .price h1 {
+    font-size: 20px;
+  }
+}
